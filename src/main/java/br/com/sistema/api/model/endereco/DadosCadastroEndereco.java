@@ -1,5 +1,12 @@
 package br.com.sistema.api.model.endereco;
 
-public class DadosCadastroEndereco {
+public record DadosCadastroEndereco(
+    String logradouro,
+    String bairro,
+    String cep,
+    String complemento,
+    String cidade,
+    String uf
+) {
     
-}
+} 

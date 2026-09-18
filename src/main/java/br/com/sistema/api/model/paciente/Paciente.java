@@ -18,8 +18,15 @@ public class Paciente {
     private String nome;
     private String email;
     private String telefone;
-    private String crm;
-    
+        
     @Embedded
     private Endereco endereco;
+
+    public Paciente (DadosCadastroPaciente dados) {
+        this.nome = dados.nome();
+        this.email = dados.email();
+        this.telefone = dados.telefone();
+        this.endereco = new Endereco(dados.endereco());
+    
+    }
 }
