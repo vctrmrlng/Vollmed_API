@@ -1,5 +1,12 @@
 package br.com.sistema.api.model.paciente;
 
-public class DadosAtualizacaoPaciente {
+import br.com.sistema.api.model.endereco.DadosCadastroEndereco;
+
+public record DadosAtualizacaoPaciente(
+    Integer id,
+    String nome,
+    String email,
+    String telefone,
+    DadosCadastroEndereco endereco) {
     
-}
+};

@@ -18,6 +18,7 @@ public class Paciente {
     private String nome;
     private String email;
     private String telefone;
+    private Boolean ativo = true;
         
     @Embedded
     private Endereco endereco;
@@ -28,5 +29,26 @@ public class Paciente {
         this.telefone = dados.telefone();
         this.endereco = new Endereco(dados.endereco());
     
+    }
+
+    // Metodo para alterar o status do campo ativo
+    public void excluirLogico() {
+        this.ativo = false;
+    }
+
+    //Metodo que checa se o nome, email ou endereço está como null
+    public void atualizarInformacoes(DadosAtualizacaoPaciente dados) {
+        if (dados.nome() != null) {
+            this.nome = dados.nome();
+        }
+        if (dados.email() != null) {
+            this.email = dados.email();
+        }
+        if (dados.telefone() != null) {
+            this.telefone = dados.telefone();
+        }
+        if (dados.endereco() != null) {
+            this.endereco.atualizarInformacoes(dados.endereco());
+        }
     }
 }

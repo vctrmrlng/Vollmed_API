@@ -1,15 +1,13 @@
 package br.com.sistema.api.controller;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
 import br.com.sistema.api.model.medico.DadosAtualizacaoMedico;
 import br.com.sistema.api.model.medico.DadosCadastroMedico;
 import br.com.sistema.api.model.medico.Medico;
 import br.com.sistema.api.model.medico.MedicoRepository;
 import jakarta.transaction.Transactional;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
